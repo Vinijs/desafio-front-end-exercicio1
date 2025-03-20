@@ -1,4 +1,176 @@
-/* Estilo geral */
+#estudo {
+    margin: 10px;
+}
+
+#estudo div {
+    display: inline-block;
+    border: 1px solid #000;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+#estudo table {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 100px;
+}
+
+#estudo table td {
+    border: 1px solid #000;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin: 0px;
+}
+
+#estudo #estrutura-float{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+#estudo #estrutura-float #header div{
+    border: 1px solid #000;
+    float: left;
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+}
+
+#estudo #estrutura-float #header div .col-login{
+    width: 10%;
+    text-align: right;
+}
+
+#estudo #estrutura-float #banner{
+    border: 1px solid #000;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+#estudo #estrutura-float #conteudo {
+    clear: both;
+    width: 100%;
+}
+
+#estudo #estrutura-float #conteudo div{
+    float: left;
+    width: 80%;
+    border: 1px solid #000;
+}
+
+#estudo #estrutura-float #conteudo div #publi{
+    width: 20%;
+}
+
+#estudo #estrutura-float #footer{
+    clear: both;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+
+
+#estudo #estrutura-inline-block{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+#estudo #estrutura-inline-block #header div{
+    border: 1px solid #000;
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+
+#estudo #estrutura-inline-block #header div.col-login{
+    width: 9.3%;
+}
+
+#estudo #estrutura-inline-block #banner,
+#estudo #estrutura-inline-block #footer{
+    border: 1px solid #000;
+    text-align: center;
+    display: block;
+}
+
+#estudo #estrutura-inline-block #conteudo div{
+    border: 1px solid #000;
+    display: inline-block;
+    width: 80%;
+}
+
+#estudo #estrutura-inline-block #conteudo div#publi{
+    width: 19%;
+}
+
+
+#estudo #estrutura-flexbox {
+    margin-bottom: 100px;
+}
+
+#estudo #estrutura-flexbox #header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#estudo #estrutura-flexbox #header div{
+    border: 1px solid #000;
+    width: 46%;
+    text-align: center;
+    padding: 10px;
+}
+
+#estudo #estrutura-flexbox #header div:nth-child(1){
+    order: 1;
+}
+
+#estudo #estrutura-flexbox #header div:nth-child(2){
+    order: 2;
+}
+
+#estudo #estrutura-flexbox #header div:nth-child(3){
+    width: 100px;
+    order: 3;
+}
+
+#estudo #estrutura-flexbox #banner,
+#estudo #estrutura-flexbox #footer{
+    border: 1px solid #000;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#estudo #estrutura-flexbox #conteudo{
+    display: flex;
+    justify-content: space-between;
+}
+
+#estudo #estrutura-flexbox #conteudo div{
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+
+#estudo #estrutura-flexbox #conteudo div:nth-child(1){
+    width: 80%;
+}
+
+#estudo #estrutura-flexbox #conteudo div:nth-child(2){
+    width: 20%;
+}
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
