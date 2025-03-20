@@ -1,0 +1,74 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#about {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+#about h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
