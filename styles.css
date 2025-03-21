@@ -1,15 +1,6 @@
 #estudo {
     margin: 10px;
 }
-
-#estudo div {
-    display: inline-block;
-    border: 1px solid #000;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-}
-
 #estudo table {
     width: 100%;
     margin: 0px;
@@ -24,6 +15,13 @@
     margin: 0px;
 }
 
+
+
+
+
+
+
+
 #estudo #estrutura-float{
     width: 100%;
     margin-bottom: 100px;
@@ -37,7 +35,7 @@
     padding: 10px;
 }
 
-#estudo #estrutura-float #header div .col-login{
+#estudo #estrutura-float #header div.col-login{
     width: 10%;
     text-align: right;
 }
@@ -50,7 +48,7 @@
 }
 
 #estudo #estrutura-float #conteudo {
-    clear: both;
+    /* clear: both; */
     width: 100%;
 }
 
@@ -60,7 +58,7 @@
     border: 1px solid #000;
 }
 
-#estudo #estrutura-float #conteudo div #publi{
+#estudo #estrutura-float #conteudo div#publi{
     width: 20%;
 }
 
@@ -118,7 +116,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 #estudo #estrutura-flexbox #header div{
@@ -168,6 +166,82 @@
     width: 20%;
 }
 
+
+
+
+
+#estudo #estrutura-grid #logo{
+    grid-area: logo;
+}
+
+#estudo #estrutura-grid #menu{
+    grid-area: menu;
+}
+
+#estudo #estrutura-grid #banner{
+    grid-area: banner;
+    height: 100px;
+}
+
+#estudo #estrutura-grid #conteudo{
+    grid-area: conteudo;
+    height: 400px;
+}
+
+#estudo #estrutura-grid #publi{
+    grid-area: publi;
+}
+
+#estudo #estrutura-grid #footer{
+    grid-area: footer;
+}
+
+/* .dv10porcento {
+    grid-area: dv10porcento;
+    width: 10%;
+}
+
+.dv80porcento {
+    grid-area: dv80porcento;
+    width: 80%;
+}
+
+.dv20porcento {
+    grid-area: dv20porcento;
+    width: 20%;
+}
+
+.dv100porcento {
+    grid-area: dv100porcento;
+    width: 100%;
+} */
+
+#estudo #estrutura-grid #header{
+    display: grid;
+    grid-template-areas: 
+        "logo menu menu menu menu login"
+        "banner banner banner banner banner banner"
+        "conteudo conteudo conteudo conteudo publi publi"
+        "footer footer footer footer footer footer";
+
+    /* justify-items: stretch;
+    align-items: start; */
+
+
+    /* grid-template-columns: 45% 45% 10%;
+    grid-template-rows: 50px 150px 500px 50px; */
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+    /* grid-gap: 5px; linhas, colunas */
+
+}
+
+#estudo #estrutura-grid #header div{
+    border: 1px solid #000;
+    /* width: ; */
+    text-align: center;
+    padding: 10px;
+}
 
 
 
