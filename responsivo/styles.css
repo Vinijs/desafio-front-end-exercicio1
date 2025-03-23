@@ -174,8 +174,13 @@
     grid-area: logo;
 }
 
+
 #estudo #estrutura-grid #menu{
     grid-area: menu;
+}
+
+#estudo #estrutura-grid #login{
+    grid-area: login;
 }
 
 #estudo #estrutura-grid #banner{
@@ -233,7 +238,45 @@
     /* grid-column-gap: 10px;
     grid-row-gap: 10px; */
     /* grid-gap: 5px; linhas, colunas */
+}
 
+/* 📱 Mobile (até 767px) */
+@media (max-width: 600px) {
+    #estudo #estrutura-grid #header{
+        display: grid;
+        grid-template-areas: 
+            "logo menu menu"
+            "login login login"
+            "banner banner banner"
+            "publi publi publi"
+            "conteudo conteudo conteudo"
+            "footer footer footer";
+    }
+}
+
+/* 📲 Tablet (768px - 1024px) */
+@media (min-width: 601px) and (max-width: 992px) {
+    #estudo #estrutura-grid #header{
+        display: grid;
+        grid-template-areas: 
+            "logo menu menu menu menu menu"
+            "login login login login login login"
+            "banner banner banner banner banner banner"
+            "conteudo conteudo conteudo conteudo publi publi"
+            "footer footer footer footer footer footer";
+    }
+}
+
+/* 💻 Desktop (1025px ou mais) */
+@media (min-width: 993px) {
+    #estudo #estrutura-grid #header{
+        display: grid;
+        grid-template-areas: 
+            "logo menu menu menu menu login"
+            "banner banner banner banner banner banner"
+            "conteudo conteudo conteudo conteudo publi publi"
+            "footer footer footer footer footer footer";
+    }
 }
 
 #estudo #estrutura-grid #header div{
@@ -242,6 +285,84 @@
     text-align: center;
     padding: 10px;
 }
+
+
+/*
+@media (min-width: 768px) { -- de 768px para baixo
+    #estudo table {
+        display: none;
+    }
+}
+
+*/
+
+/* @media (min-width: 40000px) {  -- de 768px para baixo
+    #estudo table {
+        display: none;
+    }
+} */
+
+/* @media print { -- serve somente para impressão
+    body {
+        font-size: 12pt;
+    }
+} */
+
+/* 📱 Mobile (até 767px) */
+@media (max-width: 600px) {
+    body {
+        #estudo table {
+            background-color: blue;
+            color: #fff;
+        }
+        #estudo table.desktop {
+            display: none;
+        }
+
+        #estudo table.mobile {
+            display: table;
+        }
+    }
+}
+
+/* 📲 Tablet (768px - 1024px) */
+@media (min-width: 601px) and (max-width: 992px) {
+    body {
+        #estudo table {
+            background-color: yellow;
+        }
+
+        #estudo table.desktop {
+            display: none;
+        }
+
+        #estudo table.mobile {
+            display: table;
+        }
+
+        
+    }
+}
+
+/* 💻 Desktop (1025px ou mais) */
+@media (min-width: 993px) {
+    body {
+        #estudo table {
+            background-color: #cfcfcf;
+        }
+
+        #estudo table.desktop {
+            display: table;
+        }
+
+        #estudo table.mobile {
+            display: none;
+        }
+    }
+}
+
+
+
 
 
 
