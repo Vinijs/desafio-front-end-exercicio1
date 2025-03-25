@@ -14,16 +14,30 @@
         </div>
         <h1>Delicious Burger</h1>
         <nav>
+            <button>
+                <hr>
+                <hr>
+                <hr>
+            </button>
             <ul>
-                <li><a href="#">Menu Item 1</a></li>
-                <li><a href="#">Menu Item 2</a></li>
-                <li><a href="#">Menu Item 3</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mais-vistos.html">Mais vistos</a></li>
+                <li><a href="oferta-do-dia.html">Oferta do dia</a></li>
+                <li><a href="entrar.html">Entrar</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="hero">
-            <img src="banner.webp" alt="Hero Image" title="Hero Image">
+        <section id="carousel">
+            <button id="carousel-anterior" onclick="anterior()"><</button>
+            <div class="carousel-container">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <button id="carousel-proximo" onclick="proximo()">></button>
         </section>
         <section id="gallery">
             <div class="gallery-item">
@@ -47,5 +61,6 @@
     <footer>
         <p>&copy; 2024 Desafio De Front-End</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

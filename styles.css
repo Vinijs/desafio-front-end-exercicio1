@@ -17,27 +17,43 @@ header {
     padding: 10px 20px;
 }
 
+header h1 {
+    font-size: 20px;
+}
+
+header button {
+    height: 40px;
+    width: 45px;
+    background-color: #545454;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+header button hr {
+    border: 1px solid #918e8e;
+}
+
 #logo img {
     height: 50px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
 }
 
-#hero img {
+#carousel img {
     width: 100%;
     height: auto;
 }
@@ -70,4 +86,56 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+@media (min-width: 793px) {
+    
+    header nav button {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    #carousel {
+        text-align: center;
+        display: flex;
+    }
+
+    #carousel div.carousel-container {
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        white-space: nowrap;
+    }
+
+    #carousel div ul {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    
+    #carousel div ul li {
+        width: 1500px;
+        height: 300px;
+        overflow: hidden;
+        background-image: url('banner.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #carousel div ul li:nth-child(2) {
+        background-image: url('item.webp');
+    }
+
+    #carousel div ul li:nth-child(3) {
+        background-image: url('banner.webp');
+    }
+
+
+
 }
