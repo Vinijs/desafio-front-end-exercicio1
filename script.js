@@ -1,6 +1,16 @@
 
 function ajustaImagens(){
-    document.querySelector('#carousel .carousel-container li').style.width = window.innerWidth + "px"
+    let lis =  document.querySelectorAll('#carousel .carousel-container li');
+    for(li of lis){
+        li.style.width = window.innerWidth + "px";
+        let imgTag = li.querySelector("img");
+        imgTag.style.display = "none";
+        let img = imgTag.src
+        li.style.backgroundImage = "url('" + img +"')";
+        li.style.backgroundSize = "cover";
+        li.style.backgroundRepeat = "no-repeat";
+        li.style.backgroundPosition = "center";
+    }
 }
 
 function anterior(){
@@ -11,4 +21,10 @@ function proximo(){
     document.querySelector('#carousel div').scrollLeft += window.innerWidth
 }
 
-ajustaImagens()
+window.addEventListener('load', function() {
+    ajustaImagens()
+});
+
+window.addEventListener('resize', function() {
+    ajustaImagens()
+});
