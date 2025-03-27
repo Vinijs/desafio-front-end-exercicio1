@@ -21,6 +21,19 @@ function proximo(){
     document.querySelector('#carousel div').scrollLeft += window.innerWidth
 }
 
+function abrirMenu(button){
+
+    let menu = document.getElementById("menu");
+    if( ! menu.classList.contains("menu-aberto")){
+        menu.classList.add("menu-aberto");
+        button.classList.add("botao-aberto");
+    }
+    else {
+        menu.classList.remove("menu-aberto");
+        button.classList.remove("botao-aberto");
+    }
+}
+
 window.addEventListener('load', function() {
     ajustaImagens()
 });

@@ -21,7 +21,7 @@ header h1 {
     font-size: 20px;
 }
 
-header button {
+header nav button {
     height: 40px;
     width: 45px;
     background-color: #545454;
@@ -29,26 +29,64 @@ header button {
     color: #fff;
 }
 
-header button hr {
-    border: 1px solid #918e8e;
-}
+header nav button::before {
+    content: "";
+    position: absolute;
+    top: 32%;
+    left: 28%;
+    /* transform: translateX(-50%); */
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 0 6px 0 #fff, 0 12px 0 #fff;
+  }
+
+header nav button.botao-aberto::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    width: 20px;
+    height: 20px;
+    background-color:unset;
+    box-shadow: unset;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(314deg);
+  }
 
 #logo img {
     height: 50px;
 }
 
-nav ul {
+
+header nav {
+    position: relative;
+}
+
+header nav .menu-aberto{
+    display: block!important;
+}
+header nav ul#menu {
     list-style: none;
     display: none;
-    margin: 0;
-    padding: 0;
+    position: absolute;
+    z-index: 1;
+    background: #333;
+    width: 200px;
+    padding: 5px;
+    right: -20px;
+}
+header nav ul#menu li {
+    margin: 15px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 10px;
+}
+header nav ul#menu li:last-child {
+    border-bottom: 0px;
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
+header nav ul#menu li a {
     color: white;
     text-decoration: none;
 }
@@ -158,5 +196,21 @@ footer {
         text-shadow: 2px 2px 4px #000;
     }
 
-
+    header nav .menu-aberto{
+        display: flex!important;
+    }
+    header nav ul#menu {
+        display: flex;
+        position: unset;
+        z-index: unset;
+        background: unset;
+        width: unset;
+        padding: unset;
+        right: unset;
+    }
+    header nav ul#menu li {
+        margin: unset;
+        border-bottom: unset;
+        padding-left: 10px;
+    }
 }
