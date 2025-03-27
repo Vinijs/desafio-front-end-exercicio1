@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações do CSS no desafio</title>
+    <style>
+
+        @keyframes rotacao {
+             /* from {transform: rotate(0deg)}
+             to { transform: rotate(360deg)} */
+
+             0% { transform: rotate(0deg)}
+             50% { background-color: rgb(0, 255, 106); }
+             100% {
+                 transform: rotate(360deg);
+                 background-color: rgb(183, 255, 0);
+                }
+        }
+
+        @keyframes largura_altura {
+             from {
+                width: 100px;
+                height: 30px;
+            }
+             to { 
+                width: 200px;
+                height: 50px;
+            }
+        }
+
+        .botoes {
+            animation-name: largura_altura;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* opacity: 0; */
+            /* transition: width 1s, height 1s, background-color 1s; */
+            /* transition: opacity 1s, background-color 1s; */
+            /* continuo */
+            animation-name: rotacao;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            /* animation-direction: alternate-reverse; */
+            /* animation-fill-mode: backwards; */
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            /* quando há sobrescrita */
+            transition: width 1s, height 1s, background-color 1s;
+        }
+
+        .box-azul, .box:hover {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function adicionarClasse() {
+            let box = document.getElementById("box");
+            box.classList.add("box-azul");
+        }
+        function removerClasse() {
+            let box = document.getElementById("box");
+            box.classList.remove("box-azul");
+        }
+    </script>
+</head>
+<body>
+    <div id="box" class="box">
+    </div>
+    <button onclick="adicionarClasse()" class="botoes">Adicionar</button>
+    <button onclick="removerClasse()">Remover</button>
+</body>
+</html>

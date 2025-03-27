@@ -26,10 +26,27 @@ function abrirMenu(button){
     let menu = document.getElementById("menu");
     if( ! menu.classList.contains("menu-aberto")){
         menu.classList.add("menu-aberto");
+
         button.classList.add("botao-aberto");
     }
     else {
-        menu.classList.remove("menu-aberto");
+        let opacity = 1;
+        let transicao_opacidade_intervalo = setInterval(()=>{
+            opacity -= 0.1;
+            menu.style.cssText = `opacity: ${opacity} !important;`;
+            if(opacity < -2){
+                menu.classList.remove("menu-aberto");
+                menu.style.cssText = '';
+                clearInterval(transicao_opacidade_intervalo)  
+            }
+        }, 30);
+
+        // setTimeout(()=>{
+        //     menu.classList.remove("menu-aberto");
+        //     menu.style.cssText = '';
+        //     clearInterval(transicao_opacidade_intervalo)
+        // }, 500)        
+
         button.classList.remove("botao-aberto");
     }
 }

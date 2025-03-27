@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 50px;
+            /* Definindo a animação */
+            animation-name: expand;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+        }
+
+        /* Definindo as etapas da animação */
+        @keyframes expand {
+            from {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            to {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+        }
+
+        /* Definindo estado inicial para demonstrar transição */
+        .hidden {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 128)!important;
+        }
+    </style>
+    <title>Animation Fill Mode Example</title>
+</head>
+<body>
+    <button onclick="startAnimation()">Start Animation</button>
+    <div class="box" id="box"></div>
+
+    <script>
+        function startAnimation() {
+            var box = document.getElementById("box");
+            box.classList.add("hidden");
+            setTimeout(() => {
+                box.classList.remove("hidden");
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
