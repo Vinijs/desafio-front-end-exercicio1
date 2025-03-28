@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        :root {
+            --main-bg-color: lightblue;
+            --main-text-color: darkblue;
+            --padding: 20px;
+            --border-radius: 10px;
+        }
+
+        .container {
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            border: 2px solid var(--main-text-color);
+        }
+
+        .container h1 {
+            color: var(--main-text-color);
+        }
+
+        .container p {
+            padding: var(--padding);
+        }
+
+        .container .highlight {
+            background-color: var(--main-text-color);
+            color: var(--main-bg-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Using CSS Variables</h1>
+        <p>This is an example of using CSS variables (custom properties) in a stylesheet.</p>
+        <p class="highlight">This paragraph is highlighted using CSS variables.</p>
+    </div>
+</body>
+</html>

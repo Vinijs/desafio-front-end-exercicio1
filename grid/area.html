@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Areas</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Define 3 colunas de tamanhos iguais */
+            grid-template-rows: auto 100px; /* Define duas linhas, a primeira de altura automática e a segunda de 100px */
+            grid-gap: 10px; /* Espaço de 10px entre os itens */
+            padding: 10px;
+            border: 2px solid black;
+            grid-template-areas:
+                "header header header"
+                "main main sidebar"
+                "footer footer footer";
+        }
+        .grid-item {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 1px solid red;
+        }
+        .header {
+            grid-area: header;
+        }
+        .main {
+            grid-area: main;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item main">Main Content</div>
+        <div class="grid-item sidebar">Sidebar</div>
+        <div class="grid-item footer">Footer</div>
+    </div>
+</body>
+</html>

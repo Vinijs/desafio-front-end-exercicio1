@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:nth-child(odd) { /* Ímpares */
+            background-color: lightgray;
+        }
+        li:nth-child(even) { /* Pares */
+            background-color: lightblue;
+        }
+
+        .example2 li:nth-child(1) { /* Ímpares */
+            background-color: lightgray;
+        }
+        .example2 li:nth-child(3), example2:nth-child(4) { /* Pares */
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <ul class="example2">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    
+</body>
+</html>

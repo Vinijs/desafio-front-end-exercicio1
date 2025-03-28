@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query - Orientation</title>
+    <style>
+        .container {
+            background-color: lightblue;
+            padding: 20px;
+        }
+        
+        @media (orientation: landscape) {
+            .container {
+                background-color: lightgoldenrodyellow;
+            }
+        }
+        
+        @media (orientation: portrait) {
+            .container {
+                background-color: lightcoral;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Rotate the device to see the background color change.
+    </div>
+</body>
+</html>
