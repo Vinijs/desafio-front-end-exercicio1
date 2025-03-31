@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Este estilo será sobrescrito pelo próximo */
+        p {
+            color: blue;
+        }
+        /* Este será o princial*/
+        p {
+            color: yellow!important;
+        }
+
+        /* Este estilo tem a mesma especificidade, mas é declarado por último */
+        p {
+            color: green;
+        }
+
+    </style>
+    <title>Importância da Ordem CSS</title>
+</head>
+<body>
+    <p>Este parágrafo será verde porque a última declaração de estilo é aplicada.</p>
+</body>
+</html>

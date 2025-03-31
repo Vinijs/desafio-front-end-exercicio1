@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Seletor de elemento (menos específico) */
+        p {
+            color: blue;
+        }
+
+        /* Seletor de classe (mais específico que elemento) */
+        .highlight {
+            color: green;
+        }
+
+        /* Seletor de ID (mais específico que classe) */
+        #special {
+            color: red;
+        }
+
+        /* Seletor de atributo (pode ter especificidade variada) */
+        [data-custom] {
+            color: purple;
+        }
+        [data-custom="examplxx"] {
+            color: rgb(128, 17, 0);
+        }
+        p[data-custom="examples"]{
+           color: green;
+        }
+
+        [type="text"] {
+            border: 2px solid blue;
+        }
+    </style>
+    <title>Exemplo de Especificidade CSS</title>
+</head>
+<body>
+    <p>Este é um parágrafo.</p>
+    <p class="highlight">Este é um parágrafo destacado.</p>
+    <p id="special">Este é um parágrafo especial.</p>
+    <p data-custom="examplo">Este é um parágrafo com atributo customizado.</p>
+    <input type="text" placeholder="Texto">
+    <input type="password" placeholder="Senha">
+</body>
+</html>

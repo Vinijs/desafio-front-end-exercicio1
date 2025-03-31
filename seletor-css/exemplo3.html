@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Seletor descendente */
+        div div {
+            background-color: red;
+            color: white;
+        }
+
+        /* Seletor de filho direto */
+        div:first-child > div {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+    <title>Combinação de Seletores CSS</title>
+</head>
+<body>
+    <div>
+        a div
+        <div>
+            filho 1
+            <div>  
+                neto 1
+                <div>bisneto 1</div>
+            </div>
+        </div>
+        <div>
+            filho 2
+            <div>  
+                neto 2
+                <div>bisneto 2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
