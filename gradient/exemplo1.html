@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Gradiente para color */
+        .gradient-text {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(to right, red, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Gradiente para background-color */
+        .gradient-background-color {
+            background: linear-gradient(to right, orange, purple);
+            padding: 20px;
+            color: white;
+        }
+
+        /* Gradiente para background-image */
+        .gradient-background-image {
+            /* Define a altura e largura para a demonstração */
+            width: 100%;
+            height: 300px;
+
+            /* Combinação de gradiente e imagem */
+            background: 
+                linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), 
+                url('../banner.webp'); /* Substitua com a URL da sua imagem */
+
+            /* Ajustes adicionais para a imagem */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Gradiente de fundo */
+        .gradient-background {
+            background: linear-gradient(to right, pink, cyan);
+            padding: 20px;
+            color: black;
+        }
+    </style>
+    <title>Exemplos de Gradientes em CSS</title>
+</head>
+<body>
+    <h1 class="gradient-text">Texto com Gradiente</h1>
+
+    <div class="gradient-background-color">
+        <p>Este div tem um background-color com gradiente linear de laranja para roxo.</p>
+    </div>
+
+    <div class="gradient-background-image">
+        <p>Este div tem um background-image com gradiente linear de verde para amarelo.</p>
+    </div>
+
+    <div class="gradient-background">
+        <p>Este div tem um gradiente de fundo linear de rosa para ciano.</p>
+    </div>
+</body>
+</html>

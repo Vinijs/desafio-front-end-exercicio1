@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .mask-example {
+            width: 400px;
+            height: 220px;
+            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/234228/backdrop.jpg');
+            mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/234228/alpha-cat.png');
+            mask-size: cover;
+            mask-repeat: no-repeat;
+            margin: 20px;
+        }
+    </style>
+    <title>Mask Example</title>
+</head>
+<body>
+    <div>
+        <div>Imagem de Fundo</div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/234228/backdrop.jpg">
+    </div>
+    <div>
+        <div>Minha mascara</div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/234228/alpha-cat.png">
+    </div>
+    <hr>
+    <div>
+        <div>Efeito aplicado</div>
+        <div class="mask-example"></div>
+    </div>
+    
+</body>
+</html>

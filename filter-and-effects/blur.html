@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <style>
+        .filter-example {
+            width: 300px;
+            height: 200px;
+            background-image: url('../banner.webp');
+            background-size: cover;
+            filter: blur(5px); /*a imagem de fundo borrada*/
+            margin: 20px;
+            transition: width 0.5s, height 0.5s;
+        }
+        .filter-example:hover {
+            width: 350px;
+            height: 250px;
+            filter: unset;
+        }
+        .container {
+            display: flex;
+        }
+    </style>
+    <title>Filter Example</title>
+</head>
+<body>
+    <div class="container">
+        <div class="filter-example"></div>
+        <div class="filter-example"></div>
+        <div class="filter-example"></div>
+        <div class="filter-example"></div>
+    </div>
+
+</body>
+</html>

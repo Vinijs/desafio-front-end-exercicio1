@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .gradient-box {
+            width: 200px;
+            height: 200px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .gradient-top-bottom {
+            background: linear-gradient(to bottom, red, yellow);
+        }
+
+        .gradient-bottom-top {
+            background: linear-gradient(to top, blue, green);
+        }
+
+        .gradient-left-right {
+            background: linear-gradient(to right, purple, pink);
+        }
+
+        .gradient-right-left {
+            background: linear-gradient(to left, orange, cyan);
+        }
+
+        .gradient-diagonal {
+            background: linear-gradient(45deg, black, white);
+        }
+
+        .gradient-reverse-diagonal {
+            background: linear-gradient(-45deg, brown, lightblue);
+        }
+
+        .gradient-box-circle {
+            background: radial-gradient(circle, red, yellow, green);
+        }
+    </style>
+    <title>Exemplos de Gradientes em Diferentes Direções</title>
+</head>
+<body>
+    <div class="gradient-box gradient-top-bottom">Top to Bottom</div>
+    <div class="gradient-box gradient-bottom-top">Bottom to Top</div>
+    <div class="gradient-box gradient-left-right">Left to Right</div>
+    <div class="gradient-box gradient-right-left">Right to Left</div>
+    <div class="gradient-box gradient-diagonal">Diagonal</div>
+    <div class="gradient-box gradient-reverse-diagonal">Reverse Diagonal</div>
+    <div class="gradient-box gradient-box-circle">Circle</div>
+</body>
+</html>
