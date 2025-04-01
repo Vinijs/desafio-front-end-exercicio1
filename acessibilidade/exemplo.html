@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página acessível com boas práticas de acessibilidade em HTML.">
+    <title>Página Acessível</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        a {
+            color: #007BFF;
+        }
+        a:focus {
+            outline: 3px solid #FFA500;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 title="Este é o headline da pagina, onde terá o titulo principal">Bem-vindo à Página Acessível</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a title="bla bla bla" href="#conteudo">Ir para o conteúdo</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="conteudo">
+        <section>
+            <h2>Seção com Imagem Acessível</h2>
+            <img src="../banner.webp" title="bla bla bla" alt="Descrição da imagem para acessibilidade" width="300">
+        </section>
+        
+        <section>
+            <h2>Formulário Acessível</h2>
+            <form aria-labelledby="form-titulo">
+                <fieldset>
+                    <legend id="form-titulo">Entre em Contato</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p id="contato">Contato: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+    </footer>
+</body>
+</html>
