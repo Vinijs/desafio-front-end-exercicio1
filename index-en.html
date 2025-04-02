@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico" type="image/png">
+    <title>Desafio De Front-End</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.webp" width="50px" alt="Logo">
+        </div>
+        <h1>Delicious Burger</h1>
+        <nav>
+            <button onclick="abrirMenu(this)"></button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="index-en.html" class="ativo">Inglês</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="carrossel">
+            <button class="carrossel-button" id="carrossel-anterior" onclick="anterior()"><</button>
+            <div class="carrossel-container">
+                <ul>
+                    <li><img src="banner.webp"></li>
+                    <li><img src="item.webp"></li>
+                    <li><img src="banner.webp"></li>
+                </ul>
+            </div>
+            <button class="carrossel-button" id="carrossel-proximo" onclick="proximo()">></button>
+        </section>
+        <section id="gallery">
+            <div class="gallery-item">
+                <img src="item.webp" alt="Burger and Fries 1">
+            </div>
+            <div class="gallery-item">
+                <img src="item.webp" alt="Burger and Fries 2">
+            </div>
+            <div class="gallery-item">
+                <img src="item.webp" alt="Burger and Fries 3">
+            </div>
+            <div class="gallery-item">
+                <img src="item.webp" alt="Burger and Fries 4">
+            </div>
+        </section>
+        <section id="about">
+            <h2>About the Site</h2>
+            <p>The star of the menu is undoubtedly the <span class="highlight">"Delicious Burger"</span>, an irresistible combination of juicy meat, melted cheese, crispy bacon, and a special secret sauce. For vegetarians, the <span class="highlight">"Veggie Delight"</span> option is equally impressive, featuring a seasoned chickpea patty and a selection of fresh vegetables that even the most dedicated carnivores will love.</p>
+
+            <p>But Delicious Burger isn't just about burgers. The restaurant also offers a variety of sides that perfectly complement the main dishes. The rosemary and sea salt rustic fries are an absolute hit, as are the crispy onion rings. For those looking for something different, the cheese balls with pepper jelly are a pleasant surprise.</p>
+
+            <p>The drinks are also a highlight. In addition to traditional options like sodas and natural juices, Delicious Burger boasts a selection of craft beers that pair perfectly with the menu items. For milkshake lovers, the <span class="highlight">"Supreme Milkshake"</span> is a true temptation, featuring vanilla ice cream, chocolate syrup, and whipped cream.</p>
+
+            <p>The ambiance at Delicious Burger is another strong point. With a style that blends rustic and industrial elements, the space is decorated with wooden furniture, metal light fixtures, and plants that add a touch of freshness. The carefully selected soundtrack varies between classic rock and jazz, creating a pleasant and relaxed atmosphere.</p>
+
+            <p>Sustainability is also evident at Delicious Burger. The owners invest in eco-friendly packaging and reducing plastic use, as well as prioritizing local suppliers and organic ingredients whenever possible. This sustainable philosophy attracts a conscious and engaged audience that values companies committed to the environment.</p>
+
+            <p>The team at Delicious Burger is trained to offer excellent service. Friendly and knowledgeable, the staff are always ready to suggest combinations, explain dishes, and ensure each customer has a memorable experience. The open kitchen allows customers to watch the food preparation, reinforcing transparency and service quality.</p>
+
+            <p>Themed events and special promotions are frequent at Delicious Burger. From karaoke nights to tastings of new dishes, the schedule is always full of activities that attract both regulars and new visitors. The restaurant's social media is regularly updated, keeping everyone informed about the latest news and events.</p>
+
+            <p>In summary, Delicious Burger is much more than a place to eat burgers. It is a space where friends meet, families celebrate, and everyone leaves satisfied. With an unwavering commitment to quality, flavor, and sustainability, Delicious Burger continues to win hearts and palates, establishing itself as a reference in the city's gastronomic scene.</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Desafio De Front-End</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

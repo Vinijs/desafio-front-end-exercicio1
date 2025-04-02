@@ -1,6 +1,5 @@
 ```css
 ==== Proximos passos ===
-- link ancora
 - html forms
 - js manipulando dom
 - aprofundando em js, utilizando ajax

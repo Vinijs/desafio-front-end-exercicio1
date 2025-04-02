@@ -98,6 +98,15 @@ header nav ul#menu li a {
     text-decoration: none;
 }
 
+header nav ul#menu li a.ativo {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main section#forms{
+    padding: 2vw;
+}
+
 #carousel img {
     width: 100%;
     height: 100%;
@@ -156,7 +165,7 @@ footer {
 
 #carousel div ul li {
     width: 992px;
-    height: 150px;
+    height: 300px;
 }
 
 #carousel .carousel-button {
@@ -178,6 +187,10 @@ footer {
     right: 0px;
 }
 
+#about p {
+    text-align: left;
+}
+
 @media (min-width: 793px) {
     
     header nav button {
@@ -192,34 +205,33 @@ footer {
     #carousel div ul li {
         height: 350px;
     }
-    
-    #carousel .carousel-button {
-        background-color: #fff;
-        border: 5px outset #ccc;
-        border-radius: 15px;
-        position: unset;
-        height: unset;
-        font-weight: bold;
-        font-size: 30px;
-        color: #fff;
-        text-shadow: 2px 2px 4px #000;
-    }
 
     header nav .menu-aberto{
         display: flex!important;
+        visibility: unset!important;
+        opacity: 1;
     }
     header nav ul#menu {
         display: flex;
+        visibility: unset;
         position: unset;
         z-index: unset;
         background: unset;
         width: unset;
         padding: unset;
         right: unset;
+        opacity: 1;
     }
     header nav ul#menu li {
         margin: unset;
         border-bottom: unset;
         padding-left: 10px;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
     }
 }

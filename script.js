@@ -39,20 +39,32 @@ function abrirMenu(button){
                 menu.style.cssText = '';
                 clearInterval(transicao_opacidade_intervalo)  
             }
-        }, 30);
-
-        // setTimeout(()=>{
-        //     menu.classList.remove("menu-aberto");
-        //     menu.style.cssText = '';
-        //     clearInterval(transicao_opacidade_intervalo)
-        // }, 500)        
+        }, 30);   
 
         button.classList.remove("botao-aberto");
     }
 }
 
+function animacaoAncoras() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita o comportamento padrão
+    
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth' // Faz a rolagem suave
+                });
+            }
+        });
+    });
+    
+}
+
 window.addEventListener('load', function() {
-    ajustaImagens()
+    ajustaImagens();
+    animacaoAncoras();
 });
 
 window.addEventListener('resize', function() {
