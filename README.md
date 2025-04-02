@@ -1,6 +1,6 @@
 ```css
 ==== Proximos passos ===
-- html forms
+- html forms (campos do form)
 - js manipulando dom
 - aprofundando em js, utilizando ajax
 - criar um html com js utilizando move, drop down
