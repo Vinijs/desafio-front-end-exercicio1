@@ -28,10 +28,88 @@
         <section id="forms">
             <h1> Forms </h1>
             <form action="receber-do-form.html" method="post" enctype="multipart/form-data">
+                <label for="senha">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" maxlength="3">
+                <br>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                <button type="button" onclick="document.getElementById('senha').type='text'">Mostrar senha</button>
+                <br>
+                <input type="email" name="email" placeholder="Digite seu e-mail">
+                <br>
+                <input type="number" name="idade" placeholder="Digite sua idade" min="0" max="100" style="width: 150px;">
+                <br>
+                <input type="date" name="data">
+                <br>
+                <input type="time" name="hora">
+                <br>
+                <input type="datetime-local" id="datetime" name="datetime">
+                <br>
+                <input type="url" name="website" placeholder="Digite seu website">
+                <br>
+                <input type="tel" name="telefone" placeholder="Digite seu telefone">
+                <br>
+                <textarea name="mensagem" cols="40" rows="5"  placeholder="Digite sua mensagem"></textarea>
+                <br>
+                <select name="opcoes">
+                    <option value="">[Selecione]</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2" selected>Opção 2</option>
+                    <option value="opcao3">Opção 3</option>
+                </select>
+                <br>
+                <select name="opcoes" multiple="true">
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                    <option value="opcao3">Opção 3</option>
+                </select>
+                <br>
+                <input type="checkbox" id="aceito" name="aceito" value="sim"> <label for="aceito">Eu aceito os termos e condições</label>
+                <input type="checkbox" id="aceito2" name="aceito2" value="sim"> <label for="aceito2">Eu aceito 2 os termos e condições</label>
+                <br>
+                <input type="radio" checked name="genero" id="masculino" value="masculino"><label for="masculino">Masculino</label>
+                <input type="radio" name="genero" id="feminino" value="feminino"><label for="feminino">Feminino</label>
+                <br>
+                <input type="file" name="arquivo">
+                <br>
+                <input type="color" name="cor_favorita">
+                <br>
+                <input type="range" name="quantidade" min="0" max="100">
+                <br>
+
+                <input type="range" id="dados" name="dados" min="0" max="100" step="10" list="tickmarks" value="50" onchange="document.getElementById('valor').innerText = this.value">
+                <datalist id="tickmarks">
+                    <option value="0" label="0"></option>
+                    <option value="10" label="10"></option>
+                    <option value="20" label="20"></option>
+                    <option value="30" label="30"></option>
+                    <option value="40" label="40"></option>
+                    <option value="50" label="50"></option>
+                    <option value="60" label="60"></option>
+                    <option value="70" label="70"></option>
+                    <option value="80" label="80"></option>
+                    <option value="90" label="90"></option>
+                    <option value="100" label="100"></option>
+                </datalist>
+                <output for="dados" id="valor">50</output>
+                <br>
+                Escondido [
+                    <input type="hidden" name="id_usuario" value="12345">
+                ] escondido
+
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
                 <input type="file" placeholder="Digite um texto" name="arquivo">
                 <input type="text" placeholder="Digite um texto" name="texto">
                 <input type="text" placeholder="Digite um número" name="numero">
-                <button type="submit">Enviar</button>
+                <br>
+                <br>
+                <button type="submit">Enviar [button]</button>
+                <input type="submit" value="Enviar [input]" />
+                <button type="reset">Limpar [button]</button>
+                <input type="reset" value="Limpar [input]">
             </form>    
         </section>
         
