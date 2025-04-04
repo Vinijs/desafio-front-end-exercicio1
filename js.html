@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico" type="image/png">
+    <title>Exercicios de js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.webp" width="50px" alt="Logo">
+        </div>
+        <h1>Delicious Burger</h1>
+        <nav>
+            <button onclick="abrirMenu(this)"></button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="js.html" class="ativo">Javascript</a></li>
+                <li><a href="index-en.html">Inglês</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>teste</h1>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Desafio De Front-End</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        let links = document.querySelectorAll("nav #menu a");
+        for(link of links){
+            // debugger
+
+            if(link.href.indexOf("#") == -1) // NÃO tiverem # entro no if
+            {
+                // let href = link.href;
+                // link.href = "#";
+                // let valor = link.innerText;
+                // function click(){
+                //     alert("oiii")
+                // }
+
+                // link.setAttribute("onclick", `
+                //     alert('Oiiii onclick - ${valor}');
+                //     window.location.href='${href}';
+                // `);
+
+
+                // link.onclick = (e) => {
+                //         alert('Oiiii onclick - ' + e.target.innerText);
+                //         window.location.href= href;
+                // }
+                    
+                    
+                //arrow function
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert("Oiiii addEventListener - " + e.target.innerText);
+                    
+                    
+                    fetch(e.target.href).then(response => {
+                        debugger
+                            if (!response.ok) {
+                            throw new Error('Erro na requisição');
+                            }
+                            return response.html(); // Converte para JSON
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('Erro: ', error);
+                        });
+                });
+
+
+            }
+        }
+    </script>
+</body>
+</html>

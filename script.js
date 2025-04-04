@@ -49,14 +49,16 @@ function animacaoAncoras() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault(); // Evita o comportamento padrão
-    
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop,
-                    behavior: 'smooth' // Faz a rolagem suave
-                });
+            try{
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop,
+                        behavior: 'smooth' // Faz a rolagem suave
+                    });
+                }
             }
+            catch(e) { }
         });
     });
     
