@@ -61,21 +61,30 @@
                 //arrow function
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
+                    let links2 = document.querySelectorAll("nav #menu a");
+                    for(link2 of links2){
+                        // link2.removeAttribute("class");
+                        link2.className = "";
+                    }
+
+                    // e.target.setAttribute("class","ativo");
+                    e.target.className = "ativo";
+
                     alert("Oiiii addEventListener - " + e.target.innerText);
                     
                     
                     fetch(e.target.href).then(response => {
-                        debugger
-                            if (!response.ok) {
+                        if (!response.ok) {
                             throw new Error('Erro na requisição');
-                            }
-                            return response.html(); // Converte para JSON
-                        })
-                        .then(data => {
-                            console.log(data);
+                        }
+                        return response.text(); // Converte para JSON
+                    })
+                    .then(data => {
+                            let main = data.match(/<main>.*?<\/main>/s)[0];
+                            document.querySelector("main").innerHTML = main;
                         })
                         .catch(error => {
-                            console.error('Erro: ', error);
+                            console.error(error);
                         });
                 });
 
